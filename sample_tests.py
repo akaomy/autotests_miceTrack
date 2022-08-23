@@ -13,7 +13,7 @@ create_btn_id = 'create-btn'
 msg_status_id = 'msg-status'
 
 
-def test_create_new_mouse():
+def test_create_new_mouse(female_mouse_id, mating_date):
     """DESCRIBE: Create new mouse with most recent date"""
 
     # it "confirms that new mice row can be added"
@@ -31,10 +31,10 @@ def test_create_new_mouse():
 
     female_id_input = browser.find_element(By.ID, mouse_id)
     female_id_input.click()
-    female_id_input.send_keys('AutoTest1')
+    female_id_input.send_keys(female_mouse_id)
 
     mating_date_input = browser.find_element(By.ID, mating_date_id)
-    mating_date_input.send_keys('08-22-2022')
+    mating_date_input.send_keys(mating_date)
 
     create_btn = browser.find_element(By.ID, create_btn_id)
     create_btn.click()
@@ -60,6 +60,6 @@ def test_create_new_mouse():
 
 
 # run tests
-test_create_new_mouse()
+test_create_new_mouse('AutoMouseID', '08-22-2022')
 
 # todo: reporting
