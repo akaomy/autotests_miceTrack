@@ -4,6 +4,13 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 # DESCRIBE mice information tracking app MiceTrack
+# variables
+url = 'http://localhost:5000/'
+create_mouse_id = 'test-id-1'
+mouse_id = 'female-mouse-manual-id'
+mating_date_id = 'mating-date'
+create_btn_id = 'create-btn'
+msg_status_id = 'msg-status'
 
 
 def test_create_new_mouse():
@@ -11,34 +18,34 @@ def test_create_new_mouse():
 
     # it "confirms that new mice row can be added"
     browser = webdriver.Chrome()
-    browser.get('http://localhost:5000/')
+    browser.get(url)
 
     try:
         WebDriverWait(browser, 10).until(
-            EC.presence_of_element_located((By.ID, 'test-id-1'))
+            EC.presence_of_element_located((By.ID, create_mouse_id))
         )
-        create_btn = browser.find_element(By.ID, 'test-id-1')
+        create_btn = browser.find_element(By.ID, create_mouse_id)
         create_btn.click()
     except:
         print('problem with locating create button')
 
-    female_id_input = browser.find_element(By.ID, 'female-mouse-manual-id')
+    female_id_input = browser.find_element(By.ID, mouse_id)
     female_id_input.click()
     female_id_input.send_keys('AutoTest1')
 
-    mating_date_input = browser.find_element(By.ID, 'mating-date')
+    mating_date_input = browser.find_element(By.ID, mating_date_id)
     mating_date_input.send_keys('08-22-2022')
 
-    create_btn = browser.find_element(By.ID, 'create-btn')
+    create_btn = browser.find_element(By.ID, create_btn_id)
     create_btn.click()
 
     success_message = 'The info has been added to the table'
 
     try:
         WebDriverWait(browser, 10).until(
-            EC.presence_of_element_located((By.ID, 'msg-status'))
+            EC.presence_of_element_located((By.ID, msg_status_id))
         )
-        alert_status = browser.find_element(By.ID, 'msg-status')
+        alert_status = browser.find_element(By.ID, msg_status_id)
 
         # verify if there is the success message "The info has been added to the table"
         # temp logging out this message to the console to verify that test passed or failed
