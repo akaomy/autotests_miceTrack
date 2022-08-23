@@ -4,6 +4,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 # DESCRIBE mice information tracking app MiceTrack
+
 # variables
 url = 'http://localhost:5000/'
 create_mouse_id = 'test-id-1'
@@ -16,7 +17,8 @@ msg_status_id = 'msg-status'
 def test_create_new_mouse(female_mouse_id, mating_date):
     """DESCRIBE: Create new mouse with most recent date"""
 
-    # it "confirms that new mice row can be added"
+    # Confirm that new mice row can be added"
+
     browser = webdriver.Chrome()
     browser.get(url)
 
@@ -48,7 +50,7 @@ def test_create_new_mouse(female_mouse_id, mating_date):
         alert_status = browser.find_element(By.ID, msg_status_id)
 
         # verify if there is the success message "The info has been added to the table"
-        # temp logging out this message to the console to verify that test passed or failed
+        # logging out the message to verify if test is passed or failed
         if success_message in alert_status.text:
             print('PASS', success_message)
         else:
