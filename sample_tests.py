@@ -1,4 +1,3 @@
-from ast import Assert
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -31,18 +30,18 @@ mating_date_input.send_keys('08-22-2022')
 create_btn = browser.find_element(By.ID, 'create-btn')
 create_btn.click()
 
+success_message = 'The info has been added to the table'
+
 # verify if there is the success message "The info has been added to the table"
 try:
     WebDriverWait(browser, 10).until(
         EC.presence_of_element_located((By.ID, 'msg-status'))
     )
     alert_status = browser.find_element(By.ID, 'msg-status')
-    print('alert_status.text', alert_status.text)
-    assert 'The info has been added to the table' in alert_status.text
+    # temp logging out this message to the console to verify that test passed
+    print('alert success', alert_status.text)
+    assert success_message in alert_status.text
 except:
     print('problem with locating alert message')
 
-
-# TODO: verify if newly created row is present in the table
-
-# browser.quit()
+browser.quit()
