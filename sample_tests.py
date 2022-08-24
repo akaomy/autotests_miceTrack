@@ -1,20 +1,7 @@
 
 import actions
+
 # DESCRIBE mice information tracking app MiceTrack
-
-
-# class CRUD_table:
-
-#     # css selectors
-#     URL = 'http://localhost:5000/'
-#     create_mouse_id = 'test-id-1'
-#     mouse_id = 'female-mouse-manual-id'
-#     mating_date_id = 'mating-date'
-#     create_btn_id = 'create-btn'
-#     msg_status_id = 'msg-status'
-
-#     def __init__(self, driver):
-#         self.driver = driver
 
 
 def test_create_new_mouse(female_mouse_id, mating_date):
