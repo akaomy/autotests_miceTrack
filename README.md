@@ -1,4 +1,4 @@
-# This is sample automated tests using Python and Selenium against miceTrack full stack app.
+# This is the sample for automated tests using Python and Selenium against miceTrack full stack app.
 
 ## To run the tests:
 
@@ -12,5 +12,5 @@
 
 ### to run seprate test:
 6. ```python3```
-7. ```from sample_tests import test_create_new_mouse```
+7. e.g ```from sample_tests import test_create_new_mouse```
 
