@@ -69,5 +69,6 @@ def verify_success_msg_present():
         print('problem with creating a mouse')
 
 
-def cleanUp():
+def tearDown():
+    browser.close()
     browser.quit()
