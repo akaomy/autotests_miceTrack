@@ -3,7 +3,14 @@
 ## To run the tests:
 
 1. run the app [instructions are here](https://github.com/akaomy/miceTrack/blob/main/README.md)
-2. git clone https://github.com/akaomy/autotests_miceTrack
-3. cd autotests_miceTrack
+2. ```git clone https://github.com/akaomy/autotests_miceTrack```
+3. ```cd autotests_miceTrack```
 4. install python3 if you don't have any [instructions](https://www.python.org/downloads/)
-4. python3 sample_tests.py
+
+### to run all of them: 
+5. ```python3 sample_tests.py```
+
+### to run seprate test:
+6. ```python3```
+7. ```from sample_tests import test_create_new_mouse```
+
