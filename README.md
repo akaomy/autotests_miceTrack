@@ -1,5 +1,10 @@
 # This is the sample for automated tests using Python and Selenium against miceTrack full stack app.
 
+## Tech stack
+- Python3
+- Selenium WebDriver
+- Pytest
+
 ## To run the tests:
 
 1. run the app [instructions are here](https://github.com/akaomy/miceTrack/blob/main/README.md)
