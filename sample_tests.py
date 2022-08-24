@@ -1,7 +1,7 @@
 
 import actions
 
-# DESCRIBE mice information tracking app MiceTrack
+# DESCRIBE mice information tracking for MiceTrack app
 
 
 def test_create_new_mouse(female_mouse_id, mating_date):
@@ -19,7 +19,7 @@ def test_create_new_mouse(female_mouse_id, mating_date):
 
     actions.verify_success_msg_present()
 
-    actions.cleanUp()
+    actions.tearDown()
 
 
 # run tests
