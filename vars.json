@@ -1,0 +1,9 @@
+{
+    "url": "http://localhost:5000/",
+    "createMouseId": "test-id-1",
+    "mouseID": "female-mouse-manual-id",
+    "matingDateId": "mating-date",
+    "createBtnId": "create-btn",
+    "msgStatusID": "msg-status",
+    "success_message": "The info has been added to the table"
+}
