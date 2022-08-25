@@ -6,3 +6,6 @@
 - Pytest
 
 ## To run the tests:
+- ```source env/bin/activate```
+- ```cd env```
+- ```pip3 install -r requirements.txt```
