@@ -1,3 +1,5 @@
 .DS_Store
 geckodriver.log
 __pycache__/
+.pytest_cache
+test_sample.py

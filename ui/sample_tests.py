@@ -21,6 +21,8 @@ def test_create_new_mouse(female_mouse_id, mating_date):
 
     actions.tearDown()
 
+# TODO: delete, update
+
 
 # run tests
 test_create_new_mouse('AutoMouseID', '08-22-2022')

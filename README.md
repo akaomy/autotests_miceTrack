@@ -3,7 +3,7 @@
 ## Tech stack
 - Python3
 - Selenium WebDriver
-- Pytest
+- {Pytest}
 
 ## To run the tests:
 
